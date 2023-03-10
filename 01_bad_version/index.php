@@ -33,8 +33,6 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 <body>
    <h1>Prducts Crud App</h1>
-
-
    <form>
       <div class="input-group mb-3">
          <input type="text" class="form-control" placeholder="Search for products" name="search" value="<?php echo $searchQuery ?>">
