@@ -10,8 +10,8 @@ if (!$id) {
    exit;
 }
 
-require_once 'database.php';
-require_once 'functions.php';
+require_once '../../database.php';
+require_once '../../functions.php';
 
 $statement = $pdo->prepare('SELECT * FROM products WHERE id = :id');
 $statement->bindValue(":id", $id);
@@ -27,7 +27,7 @@ $price = $product['price'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-   require_once 'validate_product.php';
+   require_once '../../validate_product.php';
 
    if (empty($errors)) {
       $statement = $pdo->prepare("UPDATE products SET title = :title, 
@@ -47,13 +47,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 
-<?php include_once 'views/partials/header.php' ?>
+<?php include_once '../../views/partials/header.php' ?>
 
 <p>
    <a href="index.php" class="btn btn-secondary">Back to products</a>
 </p>
 <h1>Update product</h1>
-<?php include_once "views/products/form.php" ?>
+<?php include_once "../../views/products/form.php" ?>
 </body>
 
 </html>

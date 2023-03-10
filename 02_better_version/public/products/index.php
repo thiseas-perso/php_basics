@@ -3,7 +3,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-require_once 'database.php';
+require_once '../../database.php';
 
 $searchQuery = $_GET['search'] ?? '';
 
@@ -19,7 +19,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
-<?php require_once 'views/partials/header.php' ?>
+<?php require_once '../../views/partials/header.php' ?>
 
 <h1>Prducts Crud App</h1>
 <form>
@@ -49,7 +49,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
       <?php foreach ($products as $i => $product) : ?>
          <tr>
             <td scope="row"><?php echo $i + 1 ?></td>
-            <td><img alt="" src="<?php echo $product["image"] ?>" class="thumb" /></td>
+            <td><img alt="" src="../../<?php echo $product["image"] ?>" class="thumb" /></td>
             <td><?php echo $product["title"] ?></td>
             <td><?php echo $product["price"] ?></td>
             <td><?php echo date($product["create_date"]) ?></td>
