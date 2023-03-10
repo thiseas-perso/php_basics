@@ -1,0 +1,15 @@
+{
+  "name": "thiseas/03_good_version",
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  },
+  "authors": [
+    {
+      "name": "thiseaskambas",
+      "email": "tkambas@yahoo.com"
+    }
+  ],
+  "require": {}
+}
