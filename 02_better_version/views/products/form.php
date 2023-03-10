@@ -7,7 +7,7 @@
 <?php endif ?>
 <form action="" method="post" enctype="multipart/form-data">
    <?php if ($product['image']) : ?>
-      <img src="<?php echo $product['image'] ?>" class="product-img-view" />
+      <img src="/<?php echo $product['image'] ?>" class="product-img-view" />
    <?php endif; ?>
    <div class="mb-3">
       <label for="image" class="form-label">Image</label>
