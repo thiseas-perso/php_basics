@@ -8,7 +8,7 @@ use app\controllers\ProductController;
 $router = new Router();
 
 $router->get('/', [ProductController::class, 'index']);
-$router->get('/products', [ProductController::class, 'products']);
+$router->get('/products', [ProductController::class, 'index']);
 $router->get('/products/create', [ProductController::class, 'create']);
 $router->post('/products/create', [ProductController::class, 'create']);
 $router->get('/products/update', [ProductController::class, 'update']);
